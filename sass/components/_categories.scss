@@ -1,0 +1,125 @@
+@import "../variable/variable";
+@import "../mixin/font";
+@import "../mixin/line-limit";
+
+.categories_area {
+  margin-top: 40px;
+}
+
+.categories_item {
+  position: relative;
+  border: 1px solid $border;
+  border-radius: 8px;
+  overflow: hidden;
+
+  .text {
+    padding: 18px;
+
+    .title {
+      @include font(14px, 400);
+      color: $black;
+      line-height: 22px;
+    }
+  }
+
+  .price {
+    font-size: 16px !important;
+    font-weight: 600;
+    margin-top: 9px !important;
+    color: $black;
+
+    .temp_price {
+      color: $paragraph;
+      opacity: 0.7;
+      font-weight: 500;
+      text-decoration: line-through;
+      font-size: 13px !important;
+      font-weight: 400;
+    }
+  }
+
+  .buy_now {
+    box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 20%), 0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%);
+    background-color: $secondary;
+    border: 0;
+    @include font(14px, 500);
+    color: $white;
+    border-radius: 5px;
+    padding: 6px 15px;
+    text-transform: uppercase;
+    margin-top: 10px;
+  }
+
+}
+
+.categories_slider {
+  margin-top: 24px;
+
+  .categories_item {
+    margin: 0 12px;
+  }
+
+  .icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: $bg;
+    color: $black;
+    text-align: center;
+    line-height: 40px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 9;
+    transition: $transition;
+
+    &:hover {
+      background-color: $black;
+      color: $white;
+    }
+  }
+
+  .left {
+    left: -48px;
+  }
+
+  .right {
+    right: -48px;
+  }
+}
+
+.big_categories_area {
+  margin-top: 60px;
+  .b_title {
+    @include font(22px, 600);
+    color: $white;
+    line-height: 22px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    background: linear-gradient(0deg, rgb(0 0 0 / 60%) 0%, rgb(0 0 0 / 45%) 30%, rgb(0 0 0 / 16%) 66%, rgb(0 0 0 / 0%) 100%);
+
+  }
+}
+
+.small_categories_area {
+  margin-top: 24px;
+  .text{
+    padding: 12px;
+    .title{
+      font-size: 13px !important;
+      font-weight: 400 !important;
+    }
+    .price{
+      margin-top: 2px !important;
+      font-size: 13px !important;
+    }
+  }
+}

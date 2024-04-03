@@ -1,0 +1,182 @@
+@import "../variable/variable";
+@import "../mixin/font";
+@import "../mixin/line-limit";
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  line-height: 26px;
+  color: $paragraph;
+}
+
+span {
+  display: inline-block;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+a,
+button {
+  transition: $transition;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+  @include font(14px, 400);
+  color: $black;
+  position: relative;
+  font-family: 'Roboto', sans-serif;
+  background-color: $white;
+}
+
+.mt-30 {
+  margin-top: 30px;
+}
+
+.mb-30 {
+  margin-bottom: 30px;
+}
+
+.mt-40 {
+  margin-top: 40px;
+}
+
+.mb-40 {
+  margin-bottom: 40px;
+}
+
+::selection {
+  background-color: $primary;
+  color: $white;
+}
+
+.category_title {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  align-items: center;
+  margin-bottom: 24px;
+
+  .title {
+    @include font(24px, 500);
+    text-transform: uppercase;
+  }
+
+  .view_btn {
+    background-color: $primary;
+    @include font(13px, 500);
+    color: $white;
+    border-radius: 4px;
+    text-transform: uppercase;
+    padding: 8px 14px;
+    &:hover{
+      background-color: $black;
+    }
+  }
+}
+
+// common btn
+.common_btn {
+  background-color: $black;
+  border-radius: 60px;
+  padding: 16px 38px;
+  position: relative;
+  transition: $transition;
+  color: $white;
+  @include font(16px, 600);
+  z-index: 1;
+
+  i {
+    margin-right: 8px;
+    font-size: 18px;
+  }
+
+  &::before {
+    content: "";
+    height: 100%;
+    width: 100%;
+    border-radius: 60px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    transition: transform .5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    background-color: $black;
+  }
+
+  &:hover {
+    &::before {
+      transform: scale(1.1);
+    }
+  }
+}
+
+// line limit start
+.line-limit-1 {
+  @include line_limit (1 !important);
+}
+
+.line-limit-2 {
+  @include line_limit (2 !important);
+}
+
+.line-limit-3 {
+  @include line_limit (3 !important);
+}
+
+.line-limit-4 {
+  @include line_limit (4 !important);
+}
+
+.line-limit-6 {
+  @include line_limit (6 !important);
+}
+
+.line-limit-7 {
+  @include line_limit (7 !important);
+}
+
+.line-limit-8 {
+  @include line_limit (8 !important);
+}
+
+.line-limit-9 {
+  @include line_limit (9 !important);
+}
+
+.line-limit-10 {
+  @include line_limit (10 !important);
+}

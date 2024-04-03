@@ -1,0 +1,33 @@
+@import "../variable/variable";
+@import "../mixin/font";
+@import "../mixin/line-limit";
+
+.featured_area {
+  margin-top: 60px;
+  background: transparent;
+  padding-top: 0;
+
+  .featured_item {
+    padding-right: 15px;
+    display: flex;
+    height: 100%;
+    padding: 24px;
+    border: 1px solid $border;
+
+    .icon {
+      flex: 0 0 auto;
+      margin-right: 20px;
+      i{
+        font-size: 20px
+      }
+    }
+
+    .text {
+      .title {
+        @include font(16px, 700);
+        margin-bottom: 8px;
+        text-transform: uppercase;
+      }
+    }
+  }
+}

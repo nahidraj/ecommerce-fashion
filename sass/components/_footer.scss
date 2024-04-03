@@ -1,0 +1,218 @@
+@import "../variable/variable";
+@import "../mixin/font";
+@import "../mixin/line-limit";
+
+.footer_area {
+  background-color: $bg;
+  padding: 60px 0px 0;
+  margin-top: 50px;
+
+  .footer_main {
+
+    .left_info {
+      column-gap: 70px;
+      flex-wrap: wrap;
+
+      .info_item {
+        .title {
+          @include font(14px, 500);
+          color: $paragraph;
+          text-transform: uppercase;
+          margin-bottom: 10px
+        }
+
+        ul {
+          li {
+            margin-bottom: 3px;
+
+            a {
+              @include font(12px, 400);
+              color: $paragraph;
+
+              &:hover {
+                color: $primary;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .right_info {
+      .input_groups {
+        label {
+          @include font(14px, 500);
+          color: $paragraph;
+          text-transform: uppercase;
+          margin-bottom: 5px;
+        }
+
+        .input_field {
+          input {
+            width: 100%;
+            height: 40px;
+            border-radius: 4px;
+            border: 1px solid $secondary;
+            padding: 0 90px 0 35px;
+            @include font(14px, 400);
+          }
+
+          .email_icon {
+            position: absolute;
+            top: 11px;
+            left: 10px;
+
+            i {
+              font-size: 16px;
+              color: $paragraph;
+            }
+          }
+
+          button {
+            background-color: #E87325;
+            border: 0;
+            font-size: 14px;
+            font-weight: 700;
+            color: #ffffff;
+            height: 40px;
+            padding: 6px 15px;
+            text-transform: uppercase;
+            border-top-right-radius: 4px;
+            border-bottom-right-radius: 4px;
+            position: absolute;
+            top: 0;
+            right: 0;
+          }
+        }
+
+        small {
+          @include font(11px, 500);
+          margin-top: 10px;
+          display: inline-block;
+        }
+      }
+    }
+  }
+
+  .more_info {
+    .brands {
+      text-align: center;
+      padding: 30px 15px;
+      border-bottom: 1px solid $white;
+    }
+
+    .legal {
+      text-align: center;
+      padding-top: 30px;
+
+      p {
+        @include font(12px, 400);
+        color: #000;
+        line-height: 12px;
+        margin-bottom: 8px;
+      }
+
+      a {
+        @include font(12px, 500);
+        color: #2178CF;
+        line-height: 12px;
+        margin-top: 20px;
+      }
+    }
+  }
+
+  .footer_btm {
+    background-color: $black;
+    padding: 16px 0;
+    margin-top: 60px;
+
+    .left {
+      p {
+        @include font(14px, 500);
+        color: $white;
+      }
+    }
+
+    .middle {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      span {
+        @include font(14px, 500);
+        margin-right: 18px;
+        color: $white;
+      }
+
+      a {
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        line-height: 30px;
+        border-radius: 50%;
+        color: $white;
+        margin: 0 2px;
+      }
+
+      a:nth-child(1) {
+        background: #3b5998;
+        /* Facebook official blue color */
+      }
+
+      a:nth-child(2) {
+        background: #1da1f2;
+        /* Twitter official blue color */
+      }
+
+      a:nth-child(3) {
+        background: #bd081c;
+        /* Pinterest official red color */
+      }
+
+      a:nth-child(4) {
+        background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+        /* Instagram official gradient color */
+      }
+
+    }
+
+    .right {}
+  }
+}
+
+#button {
+  display: inline-block;
+  background-color: $primary;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  color: $black;
+  text-align: center;
+  border-radius: 5px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color .3s,
+    opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  font-size: 18px;
+  z-index: 1000;
+  cursor: pointer;
+  animation: updown 2s linear infinite alternate;
+}
+
+@keyframes updown {
+  0% {
+    transform: translateY(-30px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+#button.show {
+  opacity: 1;
+  visibility: visible;
+}
