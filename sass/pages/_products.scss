@@ -1,0 +1,203 @@
+@import "../variable/variable";
+@import "../mixin/font";
+@import "../mixin/line-limit";
+
+.products_area {
+  padding-top: 60px;
+
+  .category_left_sidebar {
+    flex: 0 0 auto;
+    padding: 0;
+
+    .filter_info {
+      max-height: 300px;
+      overflow-y: auto;
+    }
+
+
+    .filter_item {
+      margin-bottom: 30px
+    }
+
+    .filter_by_size {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      overflow: hidden;
+
+      .form-check {
+        width: aut;
+        padding-left: 0;
+      }
+
+      .form-check-input {
+        display: none;
+
+        +.form-check-label {
+          /* Unchecked style  */
+          background-color: transparent;
+          border: 1px solid $border;
+          color: $black;
+          padding: 3px 10px;
+          width: 46px;
+          @include font(13px, 700);
+          text-align: center;
+          cursor: pointer;
+          user-select: none;
+          border-radius: 20px;
+          display: inline-block;
+          backface-visibility: hidden;
+          transition: $transition;
+        }
+
+        &:checked {
+          +.form-check-label {
+            /* Checked style  */
+            background-color: $black;
+            border-color: $black;
+            color: $white;
+            backface-visibility: hidden;
+          }
+        }
+      }
+
+    }
+
+    .filter_by_colour {
+      .form-check {
+        padding-left: 1.9em;
+      }
+
+      .form-check-input:checked[type="checkbox"] {
+        background: none;
+      }
+
+      .form-check-input {
+        width: 14px !important;
+        height: 14px !important;
+        background-color: $black;
+        border-radius: 50% !important;
+        border-color: transparent;
+        position: relative;
+
+        &::after {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          content: "";
+          border: 1px solid $border;
+          border-radius: 50%;
+          width: 24px;
+          height: 24px;
+        }
+
+        &:checked {
+          border-color: transparent;
+
+          &::after {
+            border-color: $black;
+          }
+        }
+      }
+
+      .form-check.black {
+        .form-check-input {
+          background-color: #000;
+        }
+      }
+
+      .form-check.neutral {
+        .form-check-input {
+          background-color: #000000;
+        }
+      }
+
+      .form-check.brown {
+        .form-check-input {
+          background-color: #5D4031;
+        }
+      }
+
+      .form-check.grey {
+        .form-check-input {
+          background-color: #AFAFAF;
+        }
+      }
+
+      .form-check.purple {
+        .form-check-input {
+          background-color: #7582C3;
+        }
+      }
+
+      .form-check.orange {
+        .form-check-input {
+          background-color: #C44121;
+        }
+      }
+
+      .form-check.red {
+        .form-check-input {
+          background-color: #FF0000;
+        }
+      }
+
+      .form-check.white {
+        .form-check-input {
+          background-color: #FDF9F9;
+        }
+      }
+
+      .form-check-label {
+        position: relative;
+        top: 0px;
+        margin-left: 5px
+      }
+    }
+
+    .filter_title {
+      @include font(17px, 700);
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      border-bottom: 1px solid $border;
+      padding-bottom: 15px;
+    }
+
+    .form-check-input {
+      box-shadow: none !important;
+      cursor: pointer;
+    }
+
+    .form-check-input:checked {
+      background-color: $black;
+      border-color: $black;
+    }
+
+    .form-check-label {
+      @include font(14px, 600);
+      text-transform: uppercase;
+      cursor: pointer;
+      display: flex;
+      padding-right: 10px;
+      align-items: center;
+      position: relative;
+      top: 0;
+
+      span {
+        margin-left: auto;
+        color: $paragraph;
+        border: 1px solid $border;
+        border-radius: 5px;
+        @include font(12px, 700);
+        min-width: 28px;
+        text-align: center;
+        padding: 1px 2px;
+      }
+    }
+
+    .form-check {
+      margin-top: 12px;
+    }
+  }
+}

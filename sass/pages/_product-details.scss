@@ -1,0 +1,422 @@
+@import "../variable/variable";
+@import "../mixin/font";
+@import "../mixin/line-limit";
+
+.product_details_area {
+  padding-top: 60px;
+
+  .breadcrumb_area {
+    border: 0;
+    margin-top: 0;
+  }
+
+  .prd_image {
+    position: relative;
+    padding-left: 120px;
+
+    .slick-dots {
+      position: absolute;
+      top: 0;
+      left: -118px;
+      // max-height: 350px;
+      // overflow-y: auto;
+    }
+
+    .slick-dots li {
+      overflow: hidden;
+      display: block;
+      max-width: 100px;
+      margin: 0;
+      margin-bottom: 10px;
+    }
+
+    .slick-dots li img {
+      height: 100%;
+      width: 100%;
+      cursor: pointer;
+      opacity: 0.5;
+      object-fit: contain;
+    }
+
+    .slick-dots li.slick-active img {
+      cursor: default;
+      opacity: 1;
+    }
+
+    .icon {
+      height: 45px;
+      width: 45px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      color: $black;
+      background-color: rgba(255, 255, 255, 0.3);
+      font-size: 15px;
+      transition: $transition;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $white;
+      }
+    }
+
+    .left {
+      left: 30px;
+    }
+
+    .right {
+      right: 30px;
+    }
+
+  }
+
+  .text {
+    .breadcrumb_area {
+      padding: 0;
+      padding-bottom: 40px;
+
+      &::after {
+        display: none;
+      }
+    }
+
+    .prd_title {
+      @include font(26px, 700);
+      margin-bottom: 15px
+    }
+
+
+    .prd_price {
+      @include font(22px, 700);
+      margin-top: 20px;
+
+      .cross {
+        @include font(16px, 700);
+        margin-left: 15px;
+        color: $paragraph;
+        text-decoration: line-through;
+        opacity: 0.6;
+      }
+
+      .out_of_stock {
+        @include font(14px, 500);
+        color: red;
+        background-color: rgba(255, 0, 0, 0.1);
+        border-radius: 5px;
+        padding: 2px 10px;
+        margin-left: 40px;
+      }
+    }
+
+    .short_info {
+      margin-top: 24px;
+    }
+
+    .more_info {
+      border-top: 1px solid $border;
+      margin-top: 30px;
+      padding-top: 24px;
+
+      .colors {
+        margin-bottom: 30px;
+
+        .title {
+          @include font(16px, 700);
+          text-transform: uppercase;
+          margin-right: 30px;
+          width: 70px;
+        }
+
+        .form-check {
+          margin-right: 10px;
+
+          input {
+            border: 0;
+            width: 26px;
+            height: 26px;
+            background-color: $black;
+            border-radius: 50%;
+            cursor: pointer;
+
+            &:checked {
+              background: none;
+              background-color: green;
+              border: 4px solid $white;
+              box-shadow: 0px 1px 2px rgba(1, 15, 28, 0.4) !important;
+            }
+          }
+        }
+
+        .form-check.yellow {
+          input {
+            background-color: #F8B655;
+          }
+        }
+
+        .form-check.grey {
+          input {
+            background-color: #CBCBCB;
+          }
+        }
+
+        .form-check.black {
+          input {
+            background-color: #494E52;
+          }
+        }
+
+        .form-check.red {
+          input {
+            background-color: #B4505A;
+          }
+        }
+      }
+
+      .sizes {
+        margin-bottom: 30px;
+
+        .title {
+          @include font(16px, 700);
+          text-transform: uppercase;
+          margin-right: 30px;
+          width: 70px;
+        }
+
+        .filter_by_size {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 5px;
+          overflow: hidden;
+          margin-left: 10px;
+
+          .form-check {
+            width: auto;
+            padding-left: 0;
+          }
+
+          .form-check-input {
+            display: none;
+
+            +.form-check-label {
+              /* Unchecked style  */
+              background-color: transparent;
+              border: 1px solid $border;
+              color: $black;
+              width: 35px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              height: 35px;
+              @include font(14px, 700);
+              text-align: center;
+              cursor: pointer;
+              user-select: none;
+              border-radius: 3px;
+              backface-visibility: hidden;
+              transition: $transition;
+            }
+
+            &:checked {
+              +.form-check-label {
+                /* Checked style  */
+                background-color: $black;
+                border-color: $black;
+                color: $white;
+                backface-visibility: hidden;
+              }
+            }
+          }
+
+        }
+
+      }
+
+      .quantity_and_bag {
+        margin-top: 30px;
+
+        .quantity-main {
+          border-top: 1px solid $border;
+          margin-top: 24px;
+          padding-top: 18px;
+        }
+
+        .quantity-main p {
+          @include font(16px, 700);
+          text-transform: uppercase;
+          color: $black;
+          margin-bottom: 10px;
+        }
+
+        .quantity-main .qnt-number {
+          border: 1px solid $border;
+          border-radius: 3px;
+        }
+
+        .quantity-main button {
+          width: 40px;
+          height: 45px;
+          line-height: 45px;
+          background-color: $bg;
+          border: none;
+          font-size: 24px;
+        }
+
+        .quantity-main .cart-input {
+          width: 50px;
+          text-align: center;
+          font-size: 15px;
+          font-weight: 600;
+          border: 0;
+        }
+
+        .add-to-cart a {
+          height: 47px;
+          line-height: 47px;
+          font-size: 14px;
+          font-weight: 700;
+          background-color: $black;
+          color: $white;
+          padding: 0 70px;
+          border-radius: 3px;
+          margin-left: 20px;
+          transition: $transition;
+          text-transform: uppercase;
+          border: 1px solid transparent;
+
+          &:hover {
+            border-color: $black;
+            color: $black;
+            background-color: transparent;
+          }
+        }
+
+        .wishlist {
+          a {
+            width: 45px;
+            height: 47px;
+            line-height: 47px;
+            background-color: $black;
+            border: none;
+            font-size: 24px;
+            color: $white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            border-radius: 3px;
+            margin-left: 20px;
+            border: 1px solid transparent;
+
+            &:hover {
+              border-color: $black;
+              color: $black;
+              background-color: transparent;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .overview-and-specification {
+    margin-top: 80px;
+
+    .menus {
+
+      .nav-link {
+        color: $black;
+        @include font(15px, 700);
+        text-transform: uppercase;
+        padding: 0px 0px;
+        background-color: transparent;
+        border-radius: 0;
+        margin-right: 44px;
+        opacity: 0.7;
+        border-bottom: 2px solid transparent;
+      }
+
+      .nav-pills .nav-link.active {
+        background-color: transparent;
+        color: $black;
+        opacity: 1;
+        border-color: $black;
+      }
+    }
+
+    .information {
+      margin-top: 30px;
+
+      .details {
+        p {
+          margin-bottom: 24px;
+          @include font(16px, 400);
+        }
+
+        ul {
+          padding-left: 15px;
+
+          li {
+            margin-bottom: 5px;
+            @include font(16px, 500);
+          }
+        }
+      }
+    }
+  }
+
+  .featured_area {
+    padding-bottom: 0;
+  }
+
+}
+
+.breadcrumb_area {
+  padding: 30px 0;
+  padding-top: 0px;
+  border-top: 1px solid #ddd;
+  position: relative;
+
+  ul {
+    li {
+      display: inline-block;
+      @include font(14px, 700);
+      color: $paragraph;
+      text-transform: uppercase;
+      position: relative;
+
+      a {
+        @include font(14px, 700);
+        color: $black;
+        text-transform: uppercase;
+
+        &:hover {
+          color: $paragraph;
+        }
+      }
+
+      &::before {
+        position: absolute;
+        top: 0;
+        left: -18px;
+        content: "/";
+        color: $paragraph;
+        opacity: 0.3;
+      }
+
+      &:first-child {
+        &::before {
+          display: none;
+        }
+      }
+    }
+
+    li+li {
+      margin-left: 24px;
+    }
+  }
+}

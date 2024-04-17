@@ -72,6 +72,16 @@
 
         .cart_ {
           z-index: 9;
+          .badge{
+            width: 18px;
+            height: 18px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            top: -8px;
+            right: -0px;
+            border-radius: 50%;
+          }
 
           .cart_btn {
             color: $black;

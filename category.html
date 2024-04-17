@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0, user-scalable=yes">
+  <title>Ecommerce-Fashion</title>
+  <link rel="shortcut icon" href="" type="image/x-icon">
+  <!--all css link -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="fontawsome/css/all.min.css">
+  <link rel="stylesheet" href="fontawsome/css/fontawesome.min.css">
+  <link rel="stylesheet" href="css/slick.css">
+  <link rel="stylesheet" href="css/animate.min.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+
+<body>
+
+  <!-- header area start -->
+  <header class="header_area">
+    <!-- middle header area start -->
+    <div class="middle_header_area">
+      <div class="container">
+        <div class="middle_header_main">
+          <div class="left_area">
+            <div class="logo">
+              <a href="index.html"><img src="images/logo.svg" alt="logo"></a>
+            </div>
+            <div class="other_options">
+              <div class="search_area_">
+                <form action="#">
+                  <div class="input_groups">
+                    <input type="text" placeholder="Search">
+                    <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="right_area text-end">
+            <div class="cart_ position-relative">
+              <a href="cart.html" class="cart_btn position-relative">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span>Cart</span>
+                <small class="badge bg-danger position-absolute">5</small>
+              </a>
+            </div>
+            <div class="profile_">
+              <button class="menus_dropdown_items position-relative">
+                <i class="fa-solid fa-circle-user"></i>
+                <span>Hi Guest</span>
+                <div class="menus_dropdown_items_list">
+                  <ul class="list-unstyled text-start">
+                    <li><a href="#"><i class="fa-solid fa-user"></i> Login</a></li>
+                    <li><a href="#"><i class="fa-solid fa-address-book"></i> Register</a></li>
+                    <li><a href="#"><i class="fa-solid fa-user"></i> Order Tracking</a></li>
+                  </ul>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- middle header area end -->
+    <!-- mega menu area start -->
+    <div class="menu_area">
+      <div class="container">
+        <div class="position_relative">
+          <ul class="list-unstyled">
+            <li>
+              <a href="category.html">Home</a>
+            </li>
+            <li>
+              <a href="category.html">Panjabi</a>
+            </li>
+            <li>
+              <a href="category.html">T-shirt <i class="fa-solid fa-angle-down"></i></a>
+              <ul class="list-unstyled">
+                <li><a href="category.html">DESIGNER EDITION T-SHIRT</a></li>
+                <li><a href="category.html">SPORTS T-SHIRT</a></li>
+                <li><a href="category.html">SOLID T-SHIRT</a></li>
+                <li><a href="category.html">GRAPHICS T-SHIRT</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="category.html">Shirt <i class="fa-solid fa-angle-down"></i></a>
+              <ul class="list-unstyled">
+                <li><a href="category.html">DENIM SHIRT</a></li>
+                <li><a href="category.html">CASUAL PRINT SHIRT</a></li>
+                <li><a href="category.html">SOLID SHIRT</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="category.html">SUMMER TRACKSUIT COMBO</a>
+            </li>
+            <li>
+              <a href="category.html">POLO SHIRT</a>
+            </li>
+            <li>
+              <a href="category.html">BOXER</a>
+            </li>
+            <li>
+              <a href="category.html">WINTER <i class="fa-solid fa-angle-down"></i></a>
+              <ul class="list-unstyled">
+                <li><a href="category.html">LONG SLEEVE T-SHIRT</a></li>
+                <li><a href="category.html">SWEATSHIRT</a></li>
+                <li><a href="category.html">HOODIE</a></li>
+                <li><a href="category.html">JOGGERS</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="category.html">SHOE</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- mega menu area end -->
+  </header>
+  <!-- header area end -->
+
+
+  <!-- main area start -->
+  <main>
+    <!-- products area start -->
+    <section class="products_area">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3">
+            <div class="category_left_sidebar">
+              <div class="filter_item">
+                <h3 class="filter_title">Sort</h3>
+                <button class="filter_prd_btn_close d-block d-lg-none">
+                  <i class="fas fa-times"></i>
+                </button>
+                <div class="filter_info filter_by_sort">
+                  <!-- Sorting Options -->
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="sortingOption" value="featured"
+                      id="featuredRadio" checked>
+                    <label class="form-check-label" for="featuredRadio">Featured</label>
+                  </div>
+
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="sortingOption" value="bestSellers"
+                      id="bestSellersRadio">
+                    <label class="form-check-label" for="bestSellersRadio">Best Sellers</label>
+                  </div>
+
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="sortingOption" value="priceLowToHigh"
+                      id="priceLowToHighRadio">
+                    <label class="form-check-label" for="priceLowToHighRadio">Price Low to High</label>
+                  </div>
+
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="sortingOption" value="priceHighToLow"
+                      id="priceHighToLowRadio">
+                    <label class="form-check-label" for="priceHighToLowRadio">Price High to Low</label>
+                  </div>
+
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="sortingOption" value="alphabeticallyAZ"
+                      id="alphabeticallyAZRadio">
+                    <label class="form-check-label" for="alphabeticallyAZRadio">Alphabetically A-Z</label>
+                  </div>
+
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="sortingOption" value="alphabeticallyZA"
+                      id="alphabeticallyZARadio">
+                    <label class="form-check-label" for="alphabeticallyZARadio">Alphabetically Z-A</label>
+                  </div>
+
+                </div>
+              </div>
+              <div class="filter_item">
+                <h3 class="filter_title">Category</h3>
+                <div class="filter_info">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="sweatshirtsCheckbox">
+                    <label class="form-check-label" for="sweatshirtsCheckbox">Sweatshirts <span>05</span></label>
+                  </div>
+
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="jumpersCheckbox">
+                    <label class="form-check-label" for="jumpersCheckbox">Jumpers <span>04</span></label>
+                  </div>
+
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="tshirtsCheckbox">
+                    <label class="form-check-label" for="tshirtsCheckbox">T-shirts <span>03</span></label>
+                  </div>
+
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="cardigansCheckbox">
+                    <label class="form-check-label" for="cardigansCheckbox">Cardigans <span>01</span></label>
+                  </div>
+
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="hoodiesCheckbox">
+                    <label class="form-check-label" for="hoodiesCheckbox">Hoodies <span>01</span></label>
+                  </div>
+
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="shirtsCheckbox">
+                    <label class="form-check-label" for="shirtsCheckbox">Shirts <span>00</span></label>
+                  </div>
+
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="shortsCheckbox">
+                    <label class="form-check-label" for="shortsCheckbox">Shorts <span>00</span></label>
+                  </div>
+
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="trousersCheckbox">
+                    <label class="form-check-label" for="trousersCheckbox">Trousers <span>00</span></label>
+                  </div>
+
+                </div>
+              </div>
+              <div class="filter_item">
+                <h3 class="filter_title">Material</h3>
+                <div class="filter_info">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="cottonCheckbox">
+                    <label class="form-check-label" for="cottonCheckbox">Cotton <span>04</span></label>
+                  </div>
+
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="cashmereCheckbox">
+                    <label class="form-check-label" for="cashmereCheckbox">Cashmere <span>00</span></label>
+                  </div>
+
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="cashmereBlendCheckbox">
+                    <label class="form-check-label" for="cashmereBlendCheckbox">Cashmere Blend <span>00</span></label>
+                  </div>
+
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="leatherCheckbox">
+                    <label class="form-check-label" for="leatherCheckbox">Leather <span>00</span></label>
+                  </div>
+
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="mohairCheckbox">
+                    <label class="form-check-label" for="mohairCheckbox">Mohair <span>00</span></label>
+                  </div>
+
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="woolCheckbox">
+                    <label class="form-check-label" for="woolCheckbox">Wool <span>00</span></label>
+                  </div>
+                </div>
+              </div>
+              <div class="filter_item">
+                <h3 class="filter_title">Size</h3>
+                <div class="filter_info filter_by_size">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="xsCheckbox">
+                    <label class="form-check-label" for="xsCheckbox">XS</label>
+                  </div>
+
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="sCheckbox">
+                    <label class="form-check-label" for="sCheckbox">S</label>
+                  </div>
+
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="mCheckbox">
+                    <label class="form-check-label" for="mCheckbox">M</label>
+                  </div>
+
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="lCheckbox">
+                    <label class="form-check-label" for="lCheckbox">L</label>
+                  </div>
+
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="xlCheckbox">
+                    <label class="form-check-label" for="xlCheckbox">XL</label>
+                  </div>
+
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="2xlCheckbox">
+                    <label class="form-check-label" for="2xlCheckbox">2XL</label>
+                  </div>
+
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="3xlCheckbox">
+                    <label class="form-check-label" for="3xlCheckbox">3XL</label>
+                  </div>
+                </div>
+              </div>
+              <div class="filter_item">
+                <h3 class="filter_title">Colour</h3>
+                <div class="filter_info filter_by_colour">
+                  <div class="form-check black">
+                    <input class="form-check-input" type="checkbox" value="" id="blackCheckbox">
+                    <label class="form-check-label" for="blackCheckbox">Black <span>04</span></label>
+                  </div>
+
+                  <div class="form-check neutral">
+                    <input class="form-check-input" type="checkbox" value="" id="neutralCheckbox">
+                    <label class="form-check-label" for="neutralCheckbox">Neutral <span>02</span></label>
+                  </div>
+
+                  <div class="form-check brown">
+                    <input class="form-check-input" type="checkbox" value="" id="brownCheckbox">
+                    <label class="form-check-label" for="brownCheckbox">Brown <span>01</span></label>
+                  </div>
+
+                  <div class="form-check grey">
+                    <input class="form-check-input" type="checkbox" value="" id="greyCheckbox">
+                    <label class="form-check-label" for="greyCheckbox">Grey <span>01</span></label>
+                  </div>
+
+                  <div class="form-check purple">
+                    <input class="form-check-input" type="checkbox" value="" id="purpleCheckbox">
+                    <label class="form-check-label" for="purpleCheckbox">Purple <span>01</span></label>
+                  </div>
+
+                  <div class="form-check orange">
+                    <input class="form-check-input" type="checkbox" value="" id="orangeCheckbox">
+                    <label class="form-check-label" for="orangeCheckbox">Orange <span>00</span></label>
+                  </div>
+
+                  <div class="form-check red">
+                    <input class="form-check-input" type="checkbox" value="" id="redCheckbox">
+                    <label class="form-check-label" for="redCheckbox">Red <span>00</span></label>
+                  </div>
+
+                  <div class="form-check white">
+                    <input class="form-check-input" type="checkbox" value="" id="whiteCheckbox">
+                    <label class="form-check-label" for="whiteCheckbox">White <span>00</span></label>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-9">
+            <div class="products_right_content">
+              <div class="row g-4">
+                <div class="col-lg-4">
+                  <div class="categories_item">
+                    <a href="product-details.html" class="d-block w-100">
+                      <div class="image">
+                        <img src="images/cart-1.jpeg" alt="cart-1" class="img-fluid w-100">
+                      </div>
+                      <div class="text">
+                        <h4 class="title line-limit-1">
+                          Spoil them to the core with
+                          love-filled Gift Hampers
+                        </h4>
+                        <h5 class="price">TK. 2990 <span class="temp_price">TK.3200</span></h5>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="categories_item">
+                    <a href="product-details.html" class="d-block w-100">
+                      <div class="image">
+                        <img src="images/cart-1.jpeg" alt="cart-2" class="img-fluid w-100">
+                      </div>
+                      <div class="text">
+                        <h4 class="title line-limit-1">
+                          Sweeten up your dear one’s day with Chocolaty Gifts
+                        </h4>
+                        <h5 class="price">TK. 2990 <span class="temp_price">TK.3200</span></h5>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="categories_item">
+                    <a href="product-details.html" class="d-block w-100">
+                      <div class="image">
+                        <img src="images/cart-3.jpeg" alt="cart-3" class="img-fluid w-100">
+                      </div>
+                      <div class="text">
+                        <h4 class="title line-limit-1">
+                          Add heart & soul to your gifts by Personalising them
+                        </h4>
+                        <h5 class="price">TK. 2990 <span class="temp_price">TK.3200</span></h5>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="categories_item">
+                    <a href="product-details.html" class="d-block w-100">
+                      <div class="image">
+                        <img src="images/cart-1.jpeg" alt="cart-1" class="img-fluid w-100">
+                      </div>
+                      <div class="text">
+                        <h4 class="title line-limit-1">
+                          Spoil them to the core with
+                          love-filled Gift Hampers
+                        </h4>
+                        <h5 class="price">TK. 2990 <span class="temp_price">TK.3200</span></h5>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="categories_item">
+                    <a href="product-details.html" class="d-block w-100">
+                      <div class="image">
+                        <img src="images/cart-1.jpeg" alt="cart-2" class="img-fluid w-100">
+                      </div>
+                      <div class="text">
+                        <h4 class="title line-limit-1">
+                          Sweeten up your dear one’s day with Chocolaty Gifts
+                        </h4>
+                        <h5 class="price">TK. 2990 <span class="temp_price">TK.3200</span></h5>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="categories_item">
+                    <a href="product-details.html" class="d-block w-100">
+                      <div class="image">
+                        <img src="images/cart-3.jpeg" alt="cart-3" class="img-fluid w-100">
+                      </div>
+                      <div class="text">
+                        <h4 class="title line-limit-1">
+                          Add heart & soul to your gifts by Personalising them
+                        </h4>
+                        <h5 class="price">TK. 2990 <span class="temp_price">TK.3200</span></h5>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="categories_item">
+                    <a href="product-details.html" class="d-block w-100">
+                      <div class="image">
+                        <img src="images/cart-1.jpeg" alt="cart-1" class="img-fluid w-100">
+                      </div>
+                      <div class="text">
+                        <h4 class="title line-limit-1">
+                          Spoil them to the core with
+                          love-filled Gift Hampers
+                        </h4>
+                        <h5 class="price">TK. 2990 <span class="temp_price">TK.3200</span></h5>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="categories_item">
+                    <a href="product-details.html" class="d-block w-100">
+                      <div class="image">
+                        <img src="images/cart-1.jpeg" alt="cart-2" class="img-fluid w-100">
+                      </div>
+                      <div class="text">
+                        <h4 class="title line-limit-1">
+                          Sweeten up your dear one’s day with Chocolaty Gifts
+                        </h4>
+                        <h5 class="price">TK. 2990 <span class="temp_price">TK.3200</span></h5>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="categories_item">
+                    <a href="product-details.html" class="d-block w-100">
+                      <div class="image">
+                        <img src="images/cart-3.jpeg" alt="cart-3" class="img-fluid w-100">
+                      </div>
+                      <div class="text">
+                        <h4 class="title line-limit-1">
+                          Add heart & soul to your gifts by Personalising them
+                        </h4>
+                        <h5 class="price">TK. 2990 <span class="temp_price">TK.3200</span></h5>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="categories_item">
+                    <a href="product-details.html" class="d-block w-100">
+                      <div class="image">
+                        <img src="images/cart-1.jpeg" alt="cart-1" class="img-fluid w-100">
+                      </div>
+                      <div class="text">
+                        <h4 class="title line-limit-1">
+                          Spoil them to the core with
+                          love-filled Gift Hampers
+                        </h4>
+                        <h5 class="price">TK. 2990 <span class="temp_price">TK.3200</span></h5>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="categories_item">
+                    <a href="product-details.html" class="d-block w-100">
+                      <div class="image">
+                        <img src="images/cart-1.jpeg" alt="cart-2" class="img-fluid w-100">
+                      </div>
+                      <div class="text">
+                        <h4 class="title line-limit-1">
+                          Sweeten up your dear one’s day with Chocolaty Gifts
+                        </h4>
+                        <h5 class="price">TK. 2990 <span class="temp_price">TK.3200</span></h5>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="categories_item">
+                    <a href="product-details.html" class="d-block w-100">
+                      <div class="image">
+                        <img src="images/cart-3.jpeg" alt="cart-3" class="img-fluid w-100">
+                      </div>
+                      <div class="text">
+                        <h4 class="title line-limit-1">
+                          Add heart & soul to your gifts by Personalising them
+                        </h4>
+                        <h5 class="price">TK. 2990 <span class="temp_price">TK.3200</span></h5>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- products area end -->
+  </main>
+  <!-- main area end -->
+
+  <!-- footer area start -->
+  <footer class="footer_area">
+    <div class="container">
+      <div class="footer_main d-flex justify-content-between gap-5">
+        <div class="left_info d-flex flex-grow-1">
+          <div class="info_item">
+            <h4 class="title">ABOUT COMPANY
+            </h4>
+            <ul class="list-unstyled">
+              <li><a href="#">Who We Are</a></li>
+              <li><a href="#">Our Stores </a></li>
+              <li><a href="#">Investor Corner </a></li>
+              <li><a href="#">Career </a></li>
+            </ul>
+          </div>
+          <div class="info_item">
+            <h4 class="title">Legal
+            </h4>
+            <ul class="list-unstyled">
+              <li><a href="#"> Terms & Conditions</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Return Policy</a></li>
+            </ul>
+          </div>
+          <div class="info_item">
+            <h4 class="title">Links
+            </h4>
+            <ul class="list-unstyled">
+              <li><a href="#">Short Sleeve</a></li>
+              <li><a href="#">Long Sleeve</a></li>
+              <li><a href="#">Polo</a></li>
+              <li><a href="#">Shirt</a></li>
+              <li><a href="#">Hoodie</a></li>
+            </ul>
+
+          </div>
+        </div>
+        <div class="right_info">
+          <form action="#">
+            <div class="input_groups">
+              <label>Subscribe</label>
+              <div class="input_field position-relative">
+                <span class="email_icon">
+                  <i class="far fa-envelope"></i>
+                </span>
+                <input type="text" placeholder="Email">
+                <button type="submit">Submit</button>
+              </div>
+              <small>Get updates on promotions and offers coupons.
+              </small>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="footer_btm">
+      <div class="container">
+        <div class="d-flex justify-content-between gap-4">
+          <div class="left">
+            <p>© 1994-2024 fnp.com.All rights reserved.</p>
+          </div>
+          <div class="middle text-center">
+            <span>Keep in touch</span>
+            <div class="links">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-pinterest-p"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+          <div class="right text-end">
+            <img src="images/payment.png" alt="payment">
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- footer area end -->
+
+  <!-- all js link -->
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/slick.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

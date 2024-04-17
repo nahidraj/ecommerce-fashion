@@ -18,14 +18,12 @@ $(function () {
     },
     mouseleave: function () {
       $(".cart_options_").removeClass("show");
-    }
+    },
   });
 
   $(".remove_btn").on("click", function () {
     $(".header_cart_overlay, .cart_options_").removeClass("show");
   });
-
-
 
   // read more text js
   $(document).ready(function () {
@@ -36,7 +34,6 @@ $(function () {
     });
   });
 
-
   // gallery popup js
   $(".parent-container").magnificPopup({
     delegate: "a",
@@ -45,6 +42,19 @@ $(function () {
       enabled: true,
     },
   });
+
+  // product details image slider
+  $(".product-image-slider").slick({
+    dots: true,
+    arrows: true,
+    prevArrow: '<i class="fas left icon fa-chevron-left"></i>',
+    nextArrow: '<i class="fas right icon fa-chevron-right"></i>',
+    customPaging: function (slick, index) {
+      var targetImage = slick.$slides.eq(index).find("img").attr("src");
+      return '<img src=" ' + targetImage + ' "/>';
+    },
+  });
+  
 
   // Fixed menu js start
   // $(window).on('scroll', function () {
@@ -71,50 +81,51 @@ $(function () {
     arrows: true,
     prevArrow: '<i class="fas left icon fa-chevron-left"></i>',
     nextArrow: '<i class="fas right icon fa-chevron-right"></i>',
-    responsive: [{
-      breakpoint: 768,
-      settings: {
-        slidesToShow: 2,
-      }
-    },
-    {
-      breakpoint: 576,
-      settings: {
-        slidesToShow: 1,
-      }
-    },
-    ]
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
   });
 
- 
   // categories slider js
   $(".categories_slider").slick({
     dots: false,
     infinite: true,
     speed: 400,
-    slidesToShow:4,
+    slidesToShow: 4,
     autoplay: true,
     slidesToScroll: 1,
     arrows: true,
     prevArrow: '<i class="fas left icon fa-chevron-left"></i>',
     nextArrow: '<i class="fas right icon fa-chevron-right"></i>',
-    responsive: [{
-      breakpoint: 768,
-      settings: {
-        slidesToShow: 2,
-      }
-    },
-    {
-      breakpoint: 576,
-      settings: {
-        slidesToShow: 1,
-      }
-    },
-    ]
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
   });
 
   // quantity js
-  $(".cart-minus").on('click', function () {
+  $(".cart-minus").on("click", function () {
     var $input = $(this).parent().find("input");
     var count = parseInt($input.val()) - 1;
     count = count < 1 ? 1 : count;
@@ -122,7 +133,7 @@ $(function () {
     $input.change();
     return false;
   });
-  $(".cart-plus").on('click', function () {
+  $(".cart-plus").on("click", function () {
     var $input = $(this).parent().find("input");
     $input.val(parseInt($input.val()) + 1);
     $input.change();
@@ -139,15 +150,17 @@ $(function () {
   btn.click(function (e) {
     e.preventDefault();
     if (navigator.userAgent.toLowerCase().indexOf("firefox") > -1) {
-      $("html").animate({
-        scrollTop: 0,
-      },
+      $("html").animate(
+        {
+          scrollTop: 0,
+        },
         1000
       );
     } else {
-      $("html, body").animate({
-        scrollTop: 0,
-      },
+      $("html, body").animate(
+        {
+          scrollTop: 0,
+        },
         0
       );
     }
@@ -167,7 +180,6 @@ $(function () {
   //   delay: 50,
   //   time: 2000
   // });
-
 
   // let elt = document.querySelectorAll('.why--choose--text--slider > *')
 
@@ -189,7 +201,6 @@ $(function () {
   //   loop: true
   // });
 
-
   // Mobile menu js start
 
   $(".mobile-topbar .bars i").on("click", function () {
@@ -201,10 +212,9 @@ $(function () {
     $(".mobile-menu-overlay,.mobile-menu-main").removeClass("active");
   });
 
-  $('.sub-mobile-menu ul').hide();
+  $(".sub-mobile-menu ul").hide();
   $(".sub-mobile-menu a").on("click", function () {
     $(this).parent(".sub-mobile-menu").children("ul").slideToggle("100");
     $(this).find(".right").toggleClass("fa-caret-up fa-caret-down");
   });
-
 });

@@ -10,23 +10,23 @@
   .footer_main {
 
     .left_info {
-      column-gap: 70px;
+      column-gap: 140px;
       flex-wrap: wrap;
 
       .info_item {
         .title {
-          @include font(14px, 500);
-          color: $paragraph;
+          @include font(16px, 600);
+          color: $black;
           text-transform: uppercase;
-          margin-bottom: 10px
+          margin-bottom: 15px
         }
 
         ul {
           li {
-            margin-bottom: 3px;
+            margin-bottom: 6px;
 
             a {
-              @include font(12px, 400);
+              @include font(15px, 400);
               color: $paragraph;
 
               &:hover {
@@ -39,6 +39,8 @@
     }
 
     .right_info {
+      max-width: 400px;
+      width: 100%;
       .input_groups {
         label {
           @include font(14px, 500);
