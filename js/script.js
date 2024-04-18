@@ -1,6 +1,29 @@
 $(function () {
   "use strict";
 
+  $(document).ready(function() {
+    $(".product-image-slider .parent-container").mousemove(function(e) {
+      var image = $(this).find("img");
+      var parentOffset = $(this).offset();
+      var mouseX = e.pageX - parentOffset.left;
+      var mouseY = e.pageY - parentOffset.top;
+      var imageWidth = image.width();
+      var imageHeight = image.height();
+      var offsetX = 0.5 - (mouseX / imageWidth);
+      var offsetY = 0.5 - (mouseY / imageHeight);
+      
+      image.addClass('zoomed');
+      image.css({
+        'transform': 'scale(1.5) translate(' + offsetX * 200 + 'px,' + offsetY * 200 + 'px)'
+      });
+    });
+    
+    $(".product-image-slider .parent-container").mouseleave(function() {
+      $(this).find("img").removeClass('zoomed').css('transform', 'none');
+    });
+  });
+  
+
   // Preloader
   const getPreloaderId = document.getElementById("preloader");
   if (getPreloaderId) {
