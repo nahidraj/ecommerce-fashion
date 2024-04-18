@@ -1,14 +1,11 @@
 $(function () {
   "use strict";
 
-  $(window).on("load", function () {
-    var preloader = $("#preloader");
-
-    // Hide preloader and fade in content after a delay
-    setTimeout(function () {
-      preloader.fadeOut(500);
-    }, 0); // Change the delay value as per your requirement
-  });
+  // Preloader
+  const getPreloaderId = document.getElementById("preloader");
+  if (getPreloaderId) {
+    getPreloaderId.style.display = "none";
+  }
 
   // menu cart js
   $(".cart_").on({
