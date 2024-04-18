@@ -1,0 +1,150 @@
+@import "../variable/variable";
+@import "../mixin/font";
+@import "../mixin/line-limit";
+
+.checkout_area {
+  .checkout_form {
+    .checkout_title {
+      @include font(16px, 700);
+      color: $paragraph;
+      text-transform: uppercase;
+      margin-bottom: 5px;
+    }
+
+    .form_main {
+      padding-top: 8px;
+
+      .input_groups {
+        label {
+          @include font(14px, 500);
+          margin-bottom: 5px;
+        }
+
+        input {
+          width: 100%;
+          height: 40px;
+          border-radius: 2px;
+          padding: 0 15px;
+          border: 1px solid $border;
+
+          &:focus {
+            border-color: $black
+          }
+        }
+
+        textarea {
+          width: 100%;
+          border-radius: 2px;
+          padding: 15px;
+          border: 1px solid $border;
+
+          &:focus {
+            border-color: $black
+          }
+        }
+      }
+
+      .select2-container .select2-selection--single {
+        height: 50px;
+      }
+
+      .select2-container--default .select2-selection--single .select2-selection__rendered {
+        line-height: 50px;
+        @include font(14px, 400);
+      }
+
+      .select2-container--default .select2-selection--single .select2-selection__arrow {
+        height: 50px;
+        right: 4px;
+      }
+
+      .select2.select2-container {
+        width: 100% !important;
+      }
+
+      .select2-results__option {
+        font-size: 14px;
+      }
+      span{
+        display: block;
+      }
+    }
+
+  }
+
+  .cart_right {
+    border: 1px solid $black;
+    padding: 20px;
+
+    .order_title {
+      @include font(16px, 700);
+      color: $paragraph;
+      text-transform: uppercase;
+      margin-bottom: 5px;
+    }
+
+    .table> :not(caption)>*>* {
+      padding: 0.5rem 0 !important;
+    }
+
+    .pay_condition {
+      .form-check {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        .form-check-label {
+          @include font(15px, 500);
+          color: $paragraph;
+        }
+
+        .form-check-input {
+          position: relative;
+          top: -2px;
+          flex: 0 0 auto;
+        }
+      }
+
+      .des {
+        line-height: 20px;
+        @include font(14px, 500);
+        margin-top: 8px;
+      }
+    }
+
+    .read_conditions {
+      margin-top: 15px;
+      margin-bottom: 15px;
+
+      .form-check-input {
+        border: 2px solid $paragraph;
+
+        &:focus {
+          border-color: #0D6EFD;
+        }
+      }
+
+      .form-check-label {
+        @include font(15px, 500);
+        color: $paragraph;
+      }
+    }
+
+    .privacy_policy {
+      margin-top: 15px;
+
+      p {
+        @include font(13px, 400);
+        line-height: 18px;
+
+        a {
+          color: $black;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,309 @@
+@import "../variable/variable";
+@import "../mixin/font";
+@import "../mixin/line-limit";
+
+.cart_area {
+  .top_breadcrumb {
+    padding: 25px 0;
+
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      li {
+        display: inline-block;
+        margin: 0 5px;
+
+        a {
+          @include font(24px, 700);
+          color: $paragraph;
+          opacity: 0.4;
+          text-transform: uppercase;
+
+          &:hover {
+            color: $black !important;
+            opacity: 1;
+          }
+
+          svg {
+            margin-left: 5px;
+          }
+        }
+        .no_click{
+          &:hover{
+            color: $paragraph;
+            opacity: 0.4;
+            pointer-events: none;
+          }
+        }
+
+        &:last-child {
+          a {
+            svg {
+              display: none;
+            }
+          }
+        }
+      }
+
+      li.active {
+        a {
+          color: $black;
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .cart_left {
+    thead {
+      border-bottom: 2px solid rgba(213, 213, 213, 0.4);
+    }
+
+    th {
+      @include font(14px, 700);
+      color: $paragraph;
+      text-transform: uppercase;
+      padding: .5rem .5rem !important;
+    }
+
+    .table> :not(caption)>*>* {
+      padding: 1rem .5rem !important;
+    }
+
+    td {
+      vertical-align: middle;
+
+      .prd_ {
+        min-width: 400px
+      }
+
+      .close {
+        width: 27px;
+        height: 27px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid $border;
+        color: $paragraph;
+        background-color: transparent;
+        flex: 0 0 auto;
+
+        svg {
+          width: 16px;
+          height: 16px;
+          position: relative;
+          top: 0;
+        }
+
+        &:hover {
+          background-color: $white;
+          color: $black;
+          border-color: $black;
+
+          svg {
+            stroke: $black;
+          }
+        }
+
+      }
+
+      .cat_image {
+        width: 80px !important;
+      }
+
+      .prd_title {
+        @include font(15px, 400);
+        color: $black;
+
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+
+      .price {
+        @include font(15px, 600);
+        color: $black;
+        white-space: nowrap;
+        text-wrap: nowrap;
+      }
+
+      .qnt-number {
+        border: 1px solid $border;
+        border-radius: 3px;
+        width: 120px;
+      }
+
+      .qnt-number button {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        background-color: transparent;
+        border: none;
+
+        svg {
+          width: 14px;
+          height: 14px;
+        }
+      }
+
+      .qnt-number .cart-input {
+        width: 40px;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 400;
+        border: 0;
+      }
+
+    }
+
+    .continue_btn {
+      border-top: 1px solid rgba(213, 213, 213, 0.4);
+      padding-top: 20px;
+
+      .continue_shop_btn {
+        border: 2px solid $black;
+        @include font(14px, 500);
+        color: $black;
+        text-transform: uppercase;
+        padding: 6px 10px;
+
+        &:hover {
+          background-color: $black;
+          color: $white;
+        }
+
+        svg {
+          width: 17px;
+          height: 17px;
+          position: relative;
+          top: -2px;
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+
+  .cart_right {
+    border-left: 1px solid rgba(213, 213, 213, 0.4);
+    padding-left: 24px;
+    height: 100%;
+
+    thead {
+      border-bottom: 2px solid rgba(213, 213, 213, 0.4);
+
+      th {
+        font-size: 14px;
+        font-weight: 700;
+        color: #555;
+        text-transform: uppercase;
+        padding: 0.5rem 0 !important;
+      }
+    }
+
+    .table> :not(caption)>*>* {
+      padding: 1rem 0 !important;
+    }
+
+    tbody {
+      th {
+        text-align: right;
+      }
+
+      th,
+      td {
+        border-bottom: 1px solid rgba(213, 213, 213, 0.4);
+        @include font(13px, 400);
+        color: $paragraph;
+
+        span {
+          font-weight: 600;
+          color: $black;
+        }
+      }
+    }
+
+    tfoot {
+      th {
+        text-align: right;
+      }
+
+      th,
+      td {
+        border-bottom: 3px solid rgba(213, 213, 213, 0.4);
+        @include font(13px, 400);
+        color: $paragraph;
+
+        span {
+          font-weight: 600;
+          color: $black;
+        }
+      }
+    }
+
+    .checkout_ {
+      .checkout_btn {
+        @include font(15px, 600);
+        color: $white;
+        background-color: $black;
+        padding: 8px 30px;
+        width: 100%;
+        text-align: center;
+        text-transform: uppercase;
+      }
+    }
+
+    .coupon_box {
+      .table> :not(caption)>*>* {
+        padding: 1rem 0 !important;
+      }
+
+      th {
+        text-transform: capitalize;
+
+        svg {
+          width: 18px;
+          height: 18px;
+          stroke: $paragraph;
+          opacity: 0.6;
+          margin-right: 5px;
+        }
+      }
+
+      tbody {
+
+        th,
+        td {
+          border: 0;
+        }
+      }
+
+      .input_groups {
+        input {
+          width: 100%;
+          height: 45px;
+          border: 1px solid $border;
+          padding: 0 20px;
+          @include font(14px, 400);
+        }
+      }
+
+      .apply_coupon {
+        @include font(15px, 400);
+        border: 0;
+        color: $paragraph;
+        background-color: $bg;
+        padding: 10px 30px;
+        width: 100%;
+        text-align: center;
+
+        &:hover {
+          background-color: $paragraph;
+          color: $white;
+        }
+      }
+    }
+  }
+}

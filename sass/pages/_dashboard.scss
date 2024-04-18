@@ -1,0 +1,59 @@
+@import "../variable/variable";
+@import "../mixin/font";
+@import "../mixin/line-limit";
+
+.dashboard_area {
+  padding-top: 80px;
+
+  .left_sidebar_ {
+    width: 100%;
+    background-color: $bg;
+    border-radius: 10px;
+
+    ul {
+      padding: 12px;
+
+      li {
+        margin-bottom: 8px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        a {
+          padding: 14px 20px;
+          border-radius: 10px;
+          border: 1px solid transparent;
+          background-color: $white;
+          @include font(14px, 500);
+          text-transform: uppercase;
+          width: 100%;
+          color: $paragraph;
+          display: flex;
+          align-items: center;
+
+          &:hover {
+            background-color: $black;
+            color: $white;
+          }
+
+          i {
+            width: 24px;
+          }
+        }
+      }
+
+      li.active {
+        a {
+          background-color: $black;
+          border-color: $black;
+          color: $white;
+        }
+      }
+    }
+  }
+
+  .right_info_ {
+    
+  }
+}

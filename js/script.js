@@ -1,15 +1,14 @@
 $(function () {
   "use strict";
 
-  // $(window).on("load", function () {
-  //   var preloader = $('#preloader');
+  $(window).on("load", function () {
+    var preloader = $("#preloader");
 
-  //   // Hide preloader and fade in content after a delay
-  //   setTimeout(function () {
-  //     preloader.fadeOut(500)
-  //   }, 0); // Change the delay value as per your requirement
-
-  // });
+    // Hide preloader and fade in content after a delay
+    setTimeout(function () {
+      preloader.fadeOut(500);
+    }, 0); // Change the delay value as per your requirement
+  });
 
   // menu cart js
   $(".cart_").on({
@@ -54,8 +53,10 @@ $(function () {
       return '<img src=" ' + targetImage + ' "/>';
     },
   });
-  
 
+  $(".js-select2").select2({
+    closeOnSelect: true,
+  });
   // Fixed menu js start
   // $(window).on('scroll', function () {
   //   var scroll = $(window).scrollTop();
