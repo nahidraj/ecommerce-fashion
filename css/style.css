@@ -2206,6 +2206,29 @@ body {
   background-color: #F2F2F2;
   border-radius: 10px;
 }
+.dashboard_area .left_sidebar_ .profile_image {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  padding: 12px;
+}
+.dashboard_area .left_sidebar_ .profile_image .image {
+  border-radius: 50%;
+  overflow: hidden;
+  width: 70px;
+  height: 70px;
+}
+.dashboard_area .left_sidebar_ .profile_image .image img {
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.dashboard_area .left_sidebar_ .profile_image .text .title {
+  color: #555;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 3px;
+}
 .dashboard_area .left_sidebar_ ul {
   padding: 12px;
 }
@@ -2239,6 +2262,80 @@ body {
   background-color: #222;
   border-color: #222;
   color: #ffffff;
+}
+.dashboard_area .right_info_ .dashboard_info .info_title {
+  margin-bottom: 16px;
+  color: #555;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.6em;
+}
+.dashboard_area .right_info_ .dashboard_info .info_title b {
+  color: #222;
+}
+.dashboard_area .right_info_ .dashboard_info .info_title a {
+  color: #222;
+  font-weight: 600;
+}
+.dashboard_area .right_info_ .dashboard_info .info_title a:hover {
+  text-decoration: underline;
+}
+.dashboard_area .right_info_ .dashboard_info ul {
+  margin-top: 15px;
+}
+.dashboard_area .right_info_ .dashboard_info ul li {
+  display: inline-block;
+  margin: 6px;
+}
+.dashboard_area .right_info_ .dashboard_info ul li a {
+  padding: 12px 60px;
+  border-radius: 6px;
+  border: 1px solid #d5d5d5;
+  font-size: 16px;
+  font-weight: 500;
+  color: #222;
+}
+.dashboard_area .right_info_ .dashboard_info ul li a:hover {
+  background-color: #222;
+  color: #ffffff;
+}
+.dashboard_area .right_info_ .orders_table_info th {
+  border-bottom: 3px solid #d5d5d5;
+}
+.dashboard_area .right_info_ .orders_table_info tbody td {
+  border-bottom: 1px solid #d5d5d5;
+}
+.dashboard_area .right_info_ .orders_table_info tbody td a {
+  background-color: #222;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #ffffff;
+  padding: 6px 14px;
+}
+.dashboard_area .right_info_ .orders_table_info tbody td a:hover {
+  background-color: #47B284;
+}
+.dashboard_area .right_info_ .addresses_area .edit_address {
+  background-color: transparent;
+  border: 0;
+  color: #222;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.dashboard_area .right_info_ .addresses_area .save_address_btn {
+  font-size: 15px;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #222;
+  padding: 12px 30px;
+  text-align: center;
+  text-transform: uppercase;
+  border: 0;
+}
+.dashboard_area .right_info_ .addresses_area .save_address_btn:hover {
+  background-color: #47B284;
 }
 
 /*# sourceMappingURL=style.css.map */

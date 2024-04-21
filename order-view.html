@@ -129,103 +129,106 @@
 
   <!-- main area start -->
   <main>
-    <!-- cart area start -->
-    <section class="cart_area checkout_area order_complete">
+    <!-- dashboard area start -->
+    <section class="dashboard_area">
       <div class="container">
-        <div class="top_breadcrumb">
-          <ul class="list-unstyled">
-            <li><a href="cart.html">Shopping cart <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right">
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                  <path d="M9 6l6 6l-6 6" /></svg></a></li>
-            <li><a href="checkout.html">Checkout details <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right">
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                  <path d="M9 6l6 6l-6 6" /></svg></a></li>
-            <li class="active"><a class="no_click">Order complete <svg xmlns="http://www.w3.org/2000/svg" width="24"
-                  height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                  stroke-linecap="round" stroke-linejoin="round"
-                  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right">
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                  <path d="M9 6l6 6l-6 6" /></svg></a></li>
-          </ul>
+        <div class="left_sidebar_controller text-end d-block d-lg-none">
+          <button class="sidebar_control_btn"><i class="fas fa-sort-amount-up"></i> Menu</button>
+        </div>
+        <div class="sidebar_controller_overlay d-block d-lg-none">
+
         </div>
         <div class="row">
-          <div class="col-lg-7">
-            <div class="cart_right table-responsive">
-              <h4 class="order_complete_title">Order details</h4>
-              <table class="table table-borderless mb-1">
-                <thead>
-                  <tr>
-                    <th>Product</th>
-                    <th style="text-align: right; min-width: 120px;">Total</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Classic Half Sleeve Plain T-shirt - Steel Blue - STEEL BLUE, XXL <span>× 1</span>
-                      <p class="mt-2"><b>COLOR:</b> STEEL BLUE</p>
-                      <p><b>SIZE:</b> XXL</p>
-                    </td>
-                    <th><span>৳ 700.00</span></th>
-                  </tr>
-                  <tr>
-                    <td>Subtotal</td>
-                    <th>
-                      <span>৳ 350.00</span>
-                    </th>
-                  </tr>
-                  <tr>
-                    <td>Shipping</td>
-                    <th>
-                      Shipping: <span> ৳ 120.00</span>
-                    </th>
-                  </tr>
-                  <tr>
-                    <td>Payment method</td>
-                    <th>
-                      Cash on delivery
-                    </th>
-                  </tr>
-                  <tr>
-                    <td>Total</td>
-                    <th>
-                      <span>৳ 760.00</span>
-                    </th>
-                  </tr>
-                  <tr>
-                    <td>Note</td>
-                    <th>
-                      Elit similique mole </th>
-                  </tr>
-                </tbody>
-              </table>
-              <h4 class="order_complete_title mt-4">Billing address</h4>
-              <p><i>Helen Marsh</i></p>
-              <p><i>230 West Cowley Parkway</i></p>
-              <p><i>Daulatpur(Kushtia)</i></p>
-              <p><i>Kushtia</i></p>
-              <p><i>+1 (565) 541-3897</i></p>
-              <p class="mt-3"><i>bitapeg@mailinator.com</i></p>
+          <div class="col-lg-3">
+            <div class="left_sidebar_">
+              <div class="profile_image">
+                <div class="image">
+                  <img src="https://secure.gravatar.com/avatar/cc808cad729a7eaafaf91d9bc1857b5c?s=70&d=mm&r=g" alt="">
+                </div>
+                <div class="text">
+                  <h4 class="title">Nahid Raj</h4>
+                  <p>#31985</p>
+                </div>
+              </div>
+              <ul class="list-unstyled">
+                <li><a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a></li>
+                <li class="active"><a href="orders.html"><i class="fas fa-briefcase"></i> Orders</a></li>
+                <li><a href="addresses.html"><i class="fas fa-map"></i> Addresses</a></li>
+                <li><a href="account.html"><i class="far fa-user-circle"></i> Account details</a>
+                </li>
+                <li><a href="login.html"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+              </ul>
             </div>
           </div>
-          <div class="col-lg-5">
-            <div class="order_complete_right">
-              <h4 class="title">Thank you. Your order has been received.</h4>
-              <ul>
-                <li>Order number: <span>159421</span></li>
-                <li>Date: <span>April 19, 2024</span></li>
-                <li>otal: <b>৳ 470.00</b></li>
-                <li>Payment method: <span>Cash on delivery</span></li>
-              </ul>
+          <div class="col-lg-8">
+            <div class="right_info_ ps-2">
+              <div class="cart_area checkout_area order_complete order_view">
+                <p class="top_title">Order #<mark class="order-number">159423</mark> was placed on <mark
+                    class="order-date">April 19, 2024</mark> and is currently <mark
+                    class="order-status">Cancelled</mark>.</p>
+                <div class="cart_right table-responsive p-0 pt-4">
+                  <h4 class="order_complete_title">Order details</h4>
+                  <table class="table table-borderless mb-1">
+                    <thead>
+                      <tr>
+                        <th>Product</th>
+                        <th style="text-align: right; min-width: 120px;">Total</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Classic Half Sleeve Plain T-shirt - Steel Blue - STEEL BLUE, XXL <span>× 1</span>
+                          <p class="mt-2"><b>COLOR:</b> STEEL BLUE</p>
+                          <p><b>SIZE:</b> XXL</p>
+                        </td>
+                        <th><span>৳ 700.00</span></th>
+                      </tr>
+                      <tr>
+                        <td>Subtotal</td>
+                        <th>
+                          <span>৳ 350.00</span>
+                        </th>
+                      </tr>
+                      <tr>
+                        <td>Shipping</td>
+                        <th>
+                          Shipping: <span> ৳ 120.00</span>
+                        </th>
+                      </tr>
+                      <tr>
+                        <td>Payment method</td>
+                        <th>
+                          Cash on delivery
+                        </th>
+                      </tr>
+                      <tr>
+                        <td>Total</td>
+                        <th>
+                          <span>৳ 760.00</span>
+                        </th>
+                      </tr>
+                      <tr>
+                        <td>Note</td>
+                        <th>
+                          Elit similique mole </th>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <h4 class="order_complete_title mt-4">Billing address</h4>
+                  <p><i>Helen Marsh</i></p>
+                  <p><i>230 West Cowley Parkway</i></p>
+                  <p><i>Daulatpur(Kushtia)</i></p>
+                  <p><i>Kushtia</i></p>
+                  <p><i>+1 (565) 541-3897</i></p>
+                  <p class="mt-3"><i>bitapeg@mailinator.com</i></p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <!-- cart area end -->
+    <!-- dashboard area end -->
   </main>
   <!-- main area end -->
 
