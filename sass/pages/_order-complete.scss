@@ -2,11 +2,18 @@
 @import "../mixin/font";
 @import "../mixin/line-limit";
 
+.order_view {
+  .cart_right {
+    border-right: 0 !important;
+  }
+}
+
 .order_complete {
   .cart_right {
     border: 0;
     border-right: 1px solid $border;
-    .order_complete_title{
+
+    .order_complete_title {
       @include font(28px, 600);
       margin-bottom: 15px;
       color: $paragraph;
@@ -23,20 +30,24 @@
       color: #28a745;
       margin-bottom: 24px;
     }
-    ul{
+
+    ul {
       padding-left: 15px;
-      li{
+
+      li {
         @include font(15px, 400);
         color: $paragraph;
         margin-bottom: 12px;
-        span{
+
+        span {
           color: $black;
           opacity: 0.7;
-          font-weight:600;
+          font-weight: 600;
         }
-        b{
+
+        b {
           color: $black;
-          font-weight:600;
+          font-weight: 600;
         }
       }
     }
