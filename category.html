@@ -22,8 +22,11 @@
 
 <body>
 
+  <div id="preloader">
+    <div class="loader"></div>
+  </div>
   <!-- header area start -->
-  <header class="header_area">
+  <header class="header_area d-none d-lg-block">
     <!-- middle header area start -->
     <div class="middle_header_area">
       <div class="container">
@@ -131,14 +134,11 @@
     <!-- products area start -->
     <section class="products_area">
       <div class="container">
-        <div class="row">
+        <div class="row ">
           <div class="col-lg-3">
             <div class="category_left_sidebar">
               <div class="filter_item">
                 <h3 class="filter_title">Sort</h3>
-                <button class="filter_prd_btn_close d-block d-lg-none">
-                  <i class="fas fa-times"></i>
-                </button>
                 <div class="filter_info filter_by_sort">
                   <!-- Sorting Options -->
                   <div class="form-check">
@@ -346,8 +346,8 @@
           </div>
           <div class="col-lg-9">
             <div class="products_right_content">
-              <div class="row g-4">
-                <div class="col-lg-4">
+              <div class="row g-2 g-sm-4">
+                <div class="col-lg-3 col-sm-6 col-md-4 col-6">
                   <div class="categories_item">
                     <a href="product-details.html" class="d-block w-100">
                       <div class="image">
@@ -363,7 +363,7 @@
                     </a>
                   </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-3 col-sm-6 col-md-4 col-6">
                   <div class="categories_item">
                     <a href="product-details.html" class="d-block w-100">
                       <div class="image">
@@ -378,7 +378,7 @@
                     </a>
                   </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-3 col-sm-6 col-md-4 col-6">
                   <div class="categories_item">
                     <a href="product-details.html" class="d-block w-100">
                       <div class="image">
@@ -393,7 +393,7 @@
                     </a>
                   </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-3 col-sm-6 col-md-4 col-6">
                   <div class="categories_item">
                     <a href="product-details.html" class="d-block w-100">
                       <div class="image">
@@ -409,7 +409,7 @@
                     </a>
                   </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-3 col-sm-6 col-md-4 col-6">
                   <div class="categories_item">
                     <a href="product-details.html" class="d-block w-100">
                       <div class="image">
@@ -424,7 +424,7 @@
                     </a>
                   </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-3 col-sm-6 col-md-4 col-6">
                   <div class="categories_item">
                     <a href="product-details.html" class="d-block w-100">
                       <div class="image">
@@ -439,7 +439,7 @@
                     </a>
                   </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-3 col-sm-6 col-md-4 col-6">
                   <div class="categories_item">
                     <a href="product-details.html" class="d-block w-100">
                       <div class="image">
@@ -455,7 +455,7 @@
                     </a>
                   </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-3 col-sm-6 col-md-4 col-6">
                   <div class="categories_item">
                     <a href="product-details.html" class="d-block w-100">
                       <div class="image">
@@ -470,7 +470,7 @@
                     </a>
                   </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-3 col-sm-6 col-md-4 col-6">
                   <div class="categories_item">
                     <a href="product-details.html" class="d-block w-100">
                       <div class="image">
@@ -485,7 +485,7 @@
                     </a>
                   </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-3 col-sm-6 col-md-4 col-6">
                   <div class="categories_item">
                     <a href="product-details.html" class="d-block w-100">
                       <div class="image">
@@ -501,7 +501,7 @@
                     </a>
                   </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-3 col-sm-6 col-md-4 col-6">
                   <div class="categories_item">
                     <a href="product-details.html" class="d-block w-100">
                       <div class="image">
@@ -516,7 +516,7 @@
                     </a>
                   </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-3 col-sm-6 col-md-4 col-6">
                   <div class="categories_item">
                     <a href="product-details.html" class="d-block w-100">
                       <div class="image">
@@ -544,7 +544,7 @@
   <!-- footer area start -->
   <footer class="footer_area">
     <div class="container">
-      <div class="footer_main d-flex justify-content-between gap-5">
+      <div class="footer_main d-lg-flex justify-content-between gap-5">
         <div class="left_info d-flex flex-grow-1">
           <div class="info_item">
             <h4 class="title">ABOUT COMPANY
@@ -598,11 +598,11 @@
     </div>
     <div class="footer_btm">
       <div class="container">
-        <div class="d-flex justify-content-between gap-4">
-          <div class="left">
+        <div class="d-lg-flex justify-content-lg-between gap-4">
+          <div class="left text-center text-lg-start">
             <p>© 1994-2024 fnp.com.All rights reserved.</p>
           </div>
-          <div class="middle text-center">
+          <div class="middle text-center my-3 my-lg-0">
             <span>Keep in touch</span>
             <div class="links">
               <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -611,8 +611,8 @@
               <a href="#"><i class="fab fa-instagram"></i></a>
             </div>
           </div>
-          <div class="right text-end">
-            <img src="images/payment.png" alt="payment">
+          <div class="right text-center text-lg-end">
+            <img src="images/payment.png" alt="payment" class="img-fluid">
           </div>
         </div>
       </div>

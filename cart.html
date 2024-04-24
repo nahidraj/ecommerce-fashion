@@ -22,8 +22,11 @@
 
 <body>
 
+  <div id="preloader">
+    <div class="loader"></div>
+  </div>
   <!-- header area start -->
-  <header class="header_area">
+  <header class="header_area d-none d-lg-block">
     <!-- middle header area start -->
     <div class="middle_header_area">
       <div class="container">
@@ -144,10 +147,9 @@
                   stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right">
                   <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                   <path d="M9 6l6 6l-6 6" /></svg></a></li>
-            <li><a class="no_click">Order complete <svg xmlns="http://www.w3.org/2000/svg" width="24"
-                  height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                  stroke-linecap="round" stroke-linejoin="round"
-                  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right">
+            <li><a class="no_click">Order complete <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right">
                   <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                   <path d="M9 6l6 6l-6 6" /></svg></a></li>
           </ul>
@@ -307,7 +309,7 @@
                           <path d="M7.5 7.5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
                           <path
                             d="M3 6v5.172a2 2 0 0 0 .586 1.414l7.71 7.71a2.41 2.41 0 0 0 3.408 0l5.592 -5.592a2.41 2.41 0 0 0 0 -3.408l-7.71 -7.71a2 2 0 0 0 -1.414 -.586h-5.172a3 3 0 0 0 -3 3z" />
-                          </svg> Coupon</th>
+                        </svg> Coupon</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -334,7 +336,7 @@
   <!-- footer area start -->
   <footer class="footer_area">
     <div class="container">
-      <div class="footer_main d-flex justify-content-between gap-5">
+      <div class="footer_main d-lg-flex justify-content-between gap-5">
         <div class="left_info d-flex flex-grow-1">
           <div class="info_item">
             <h4 class="title">ABOUT COMPANY
@@ -388,11 +390,11 @@
     </div>
     <div class="footer_btm">
       <div class="container">
-        <div class="d-flex justify-content-between gap-4">
-          <div class="left">
+        <div class="d-lg-flex justify-content-lg-between gap-4">
+          <div class="left text-center text-lg-start">
             <p>© 1994-2024 fnp.com.All rights reserved.</p>
           </div>
-          <div class="middle text-center">
+          <div class="middle text-center my-3 my-lg-0">
             <span>Keep in touch</span>
             <div class="links">
               <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -401,8 +403,8 @@
               <a href="#"><i class="fab fa-instagram"></i></a>
             </div>
           </div>
-          <div class="right text-end">
-            <img src="images/payment.png" alt="payment">
+          <div class="right text-center text-lg-end">
+            <img src="images/payment.png" alt="payment" class="img-fluid">
           </div>
         </div>
       </div>
