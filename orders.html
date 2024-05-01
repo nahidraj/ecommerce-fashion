@@ -27,105 +27,189 @@
     <div class="loader"></div>
   </div>
   <!-- header area start -->
-  <header class="header_area d-none d-lg-block">
-    <!-- middle header area start -->
-    <div class="middle_header_area">
-      <div class="container">
-        <div class="middle_header_main">
-          <div class="left_area">
-            <div class="logo">
-              <a href="index.html"><img src="images/logo.svg" alt="logo"></a>
+  <div id="header-fixed-height"></div>
+  <header class="header_area" id="sticky-header">
+    <div class="header_main d-none d-lg-block">
+      <!-- middle header area start -->
+      <div class="middle_header_area">
+        <div class="container">
+          <div class="middle_header_main">
+            <div class="left_area">
+              <div class="logo">
+                <a href="index.html"><img src="images/logo.png" alt="logo"></a>
+              </div>
+              <div class="other_options">
+                <div class="search_area_">
+                  <form action="#">
+                    <div class="input_groups">
+                      <input type="text" placeholder="Search">
+                      <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </div>
+                  </form>
+                </div>
+              </div>
             </div>
-            <div class="other_options">
-              <div class="search_area_">
-                <form action="#">
-                  <div class="input_groups">
-                    <input type="text" placeholder="Search">
-                    <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <div class="right_area text-end">
+              <div class="cart_ position-relative">
+                <a href="cart.html" class="cart_btn position-relative">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                  <span>Cart</span>
+                  <small class="badge bg-danger position-absolute">5</small>
+                </a>
+              </div>
+              <div class="profile_">
+                <button class="menus_dropdown_items position-relative">
+                  <i class="fa-solid fa-circle-user"></i>
+                  <span>Hi Guest</span>
+                  <div class="menus_dropdown_items_list">
+                    <ul class="list-unstyled text-start">
+                      <li><a href="login.html"><i class="fa-solid fa-user"></i> Login</a></li>
+                      <li><a href="register.html"><i class="fa-solid fa-address-book"></i> Register</a></li>
+                    </ul>
                   </div>
-                </form>
+                </button>
               </div>
             </div>
           </div>
-          <div class="right_area text-end">
-            <div class="cart_ position-relative">
-              <a href="cart.html" class="cart_btn position-relative">
-                <i class="fa-solid fa-cart-shopping"></i>
-                <span>Cart</span>
-                <small class="badge bg-danger position-absolute">5</small>
-              </a>
+        </div>
+      </div>
+      <!-- middle header area end -->
+      <!-- mega menu area start -->
+      <div class="menu_area">
+        <div class="container">
+          <div class="position_relative">
+            <ul class="list-unstyled">
+              <li>
+                <a href="category.html">Home</a>
+              </li>
+              <li>
+                <a href="category.html">Panjabi</a>
+              </li>
+              <li>
+                <a href="category.html">T-shirt <i class="fa-solid fa-angle-down"></i></a>
+                <ul class="list-unstyled">
+                  <li><a href="category.html">DESIGNER EDITION T-SHIRT</a></li>
+                  <li><a href="category.html">SPORTS T-SHIRT</a></li>
+                  <li><a href="category.html">SOLID T-SHIRT</a></li>
+                  <li><a href="category.html">GRAPHICS T-SHIRT</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="category.html">Shirt <i class="fa-solid fa-angle-down"></i></a>
+                <ul class="list-unstyled">
+                  <li><a href="category.html">DENIM SHIRT</a></li>
+                  <li><a href="category.html">CASUAL PRINT SHIRT</a></li>
+                  <li><a href="category.html">SOLID SHIRT</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="category.html">SUMMER TRACKSUIT COMBO</a>
+              </li>
+              <li>
+                <a href="category.html">POLO SHIRT</a>
+              </li>
+              <li>
+                <a href="category.html">BOXER</a>
+              </li>
+              <li>
+                <a href="category.html">WINTER <i class="fa-solid fa-angle-down"></i></a>
+                <ul class="list-unstyled">
+                  <li><a href="category.html">LONG SLEEVE T-SHIRT</a></li>
+                  <li><a href="category.html">SWEATSHIRT</a></li>
+                  <li><a href="category.html">HOODIE</a></li>
+                  <li><a href="category.html">JOGGERS</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="category.html">SHOE</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- mega menu area end -->
+    </div>
+    <!-- mobile navbar part start -->
+    <div class="mobile-menu-area d-block d-lg-none">
+      <div class="mobile-topbar">
+        <div class="container">
+          <div class="d-flex justify-content-between align-items-center gap-3">
+            <div class="bars">
+              <i class="fas fa-bars"></i>
             </div>
-            <div class="profile_">
-              <button class="menus_dropdown_items position-relative">
-                <i class="fa-solid fa-circle-user"></i>
-                <span>Hi Guest</span>
-                <div class="menus_dropdown_items_list">
-                  <ul class="list-unstyled text-start">
-                    <li><a href="login.html"><i class="fa-solid fa-user"></i> Login</a></li>
-                    <li><a href="register.html"><i class="fa-solid fa-address-book"></i> Register</a></li>
-                  </ul>
-                </div>
-              </button>
+            <div class="logo">
+              <a href="index.html"><img src="images/logo.png" alt="logo"></a>
+            </div>
+            <div class="right_area text-end">
+              <div class="cart_ position-relative">
+                <a href="cart.html" class="cart_btn position-relative">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                  <span>Cart</span>
+                  <small class="badge bg-danger position-absolute">5</small>
+                </a>
+              </div>
+              <div class="profile_">
+                <button class="menus_dropdown_items position-relative">
+                  <i class="fa-solid fa-circle-user"></i>
+                  <span>Hi Guest</span>
+                  <div class="menus_dropdown_items_list">
+                    <ul class="list-unstyled text-start">
+                      <li><a href="login.html"><i class="fa-solid fa-user"></i> Login</a></li>
+                      <li><a href="register.html"><i class="fa-solid fa-address-book"></i> Register</a></li>
+                    </ul>
+                  </div>
+                </button>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <!-- middle header area end -->
-    <!-- mega menu area start -->
-    <div class="menu_area">
-      <div class="container">
-        <div class="position_relative">
-          <ul class="list-unstyled">
-            <li>
-              <a href="category.html">Home</a>
-            </li>
-            <li>
-              <a href="category.html">Panjabi</a>
-            </li>
-            <li>
-              <a href="category.html">T-shirt <i class="fa-solid fa-angle-down"></i></a>
-              <ul class="list-unstyled">
-                <li><a href="category.html">DESIGNER EDITION T-SHIRT</a></li>
-                <li><a href="category.html">SPORTS T-SHIRT</a></li>
-                <li><a href="category.html">SOLID T-SHIRT</a></li>
-                <li><a href="category.html">GRAPHICS T-SHIRT</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="category.html">Shirt <i class="fa-solid fa-angle-down"></i></a>
-              <ul class="list-unstyled">
-                <li><a href="category.html">DENIM SHIRT</a></li>
-                <li><a href="category.html">CASUAL PRINT SHIRT</a></li>
-                <li><a href="category.html">SOLID SHIRT</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="category.html">SUMMER TRACKSUIT COMBO</a>
-            </li>
-            <li>
-              <a href="category.html">POLO SHIRT</a>
-            </li>
-            <li>
-              <a href="category.html">BOXER</a>
-            </li>
-            <li>
-              <a href="category.html">WINTER <i class="fa-solid fa-angle-down"></i></a>
-              <ul class="list-unstyled">
-                <li><a href="category.html">LONG SLEEVE T-SHIRT</a></li>
-                <li><a href="category.html">SWEATSHIRT</a></li>
-                <li><a href="category.html">HOODIE</a></li>
-                <li><a href="category.html">JOGGERS</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="category.html">SHOE</a>
-            </li>
-          </ul>
+      <div class="mobile-menu-overlay"></div>
+      <div class="mobile-menu-main">
+        <div class="logo">
+          <a href="index.html"><img src="images/logo.png" alt="logo"></a>
+        </div>
+        <div class="close-mobile-menu"><i class="fas fa-times"></i></div>
+        <div class="menu-body">
+          <div class="menu-list">
+            <ul class="list-unstyled">
+              <li class="sub-mobile-menu">
+                <a href="index.html">Home </a>
+              </li>
+              <li class="sub-mobile-menu">
+                <a href="#">Panjabi</a>
+              </li>
+
+              <li class="sub-mobile-menu">
+                <a href="#">T-shirt <i class="fas fa-chevron-down"></i></a>
+                <ul class="list-unstyled">
+                  <li><a href="#">DESIGNER EDITION T-SHIRT</a></li>
+                  <li><a href="#">SPORTS T-SHIRT</a></li>
+                  <li><a href="#">SOLID T-SHIRT</a></li>
+                </ul>
+              </li>
+              <li class="sub-mobile-menu">
+                <a href="#">Shirt <i class="fas fa-chevron-down"></i></a>
+                <ul class="list-unstyled">
+                  <li><a href="#">DENIM SHIRT</a></li>
+                  <li><a href="#">CASUAL PRINT SHIRT</a></li>
+                  <li><a href="#">SOLID SHIRT</a></li>
+                </ul>
+              </li>
+              <li class="sub-mobile-menu">
+                <a href="#">SUMMER TRACKSUIT COMBO</a>
+              </li>
+              <li class="sub-mobile-menu"><a href="#">POLO SHIRT</a>
+              </li>
+              <li class="sub-mobile-menu">
+                <a href="#">BOXER</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
-    <!-- mega menu area end -->
+    <!-- mobile navbar part end -->
   </header>
   <!-- header area end -->
 
@@ -190,6 +274,12 @@
   </main>
   <!-- main area end -->
 
+  <!-- footer area start -->
+   <!-- scroll top part start -->
+  <button class="scroll-to-top">
+    <i class="fas fa-angle-up"></i>
+  </button>
+  <!-- scroll top part end -->
   <!-- footer area start -->
   <footer class="footer_area">
     <div class="container">
@@ -267,6 +357,7 @@
       </div>
     </div>
   </footer>
+  <!-- footer area end -->
   <!-- footer area end -->
 
   <!-- all js link -->

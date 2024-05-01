@@ -16,7 +16,9 @@
 
 
     .filter_item {
-      margin-bottom: 30px
+      margin-bottom: 14px;
+      border: 1px solid $border;
+      padding: 14px;
     }
 
     .filter_by_size {
@@ -157,7 +159,7 @@
     }
 
     .filter_title {
-      @include font(17px, 700);
+      @include font(16px, 700);
       text-transform: uppercase;
       margin-bottom: 10px;
       border-bottom: 1px solid $border;
