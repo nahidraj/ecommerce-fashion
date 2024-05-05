@@ -9,6 +9,14 @@ $(function () {
     $(".category_left_sidebar, .category_main_prd_overlay").removeClass("show");
   });
 
+  $(".mobile_search").hide();
+  $(".mobile_search_icon").on("click", function () {
+    $(".mobile_search").slideToggle("mobile_search");
+  });
+  $(".mobile_search .input_groups .close").on("click", function () {
+    $(".mobile_search").slideUp("mobile_search");
+  });
+
   // Preloader
   const getPreloaderId = document.getElementById("preloader");
   if (getPreloaderId) {
@@ -133,32 +141,34 @@ $(function () {
   });
 
   // scroll to top js
-	var btn = $(".scroll-to-top");
+  var btn = $(".scroll-to-top");
 
-	$(window).scroll(function () {
-		btn.toggleClass("show", $(window).scrollTop() > 300);
-	});
+  $(window).scroll(function () {
+    btn.toggleClass("show", $(window).scrollTop() > 300);
+  });
 
-	btn.click(function (e) {
-		e.preventDefault();
-		if (navigator.userAgent.toLowerCase().indexOf("firefox") > -1) {
-			$("html").animate({
-					scrollTop: 0,
-				},
-				800
-			);
-		} else {
-			$("html, body").animate({
-					scrollTop: 0,
-				},
-				0
-			);
-		}
-	});
+  btn.click(function (e) {
+    e.preventDefault();
+    if (navigator.userAgent.toLowerCase().indexOf("firefox") > -1) {
+      $("html").animate(
+        {
+          scrollTop: 0,
+        },
+        800
+      );
+    } else {
+      $("html, body").animate(
+        {
+          scrollTop: 0,
+        },
+        0
+      );
+    }
+  });
 
   // Mobile menu js start
 
-  $(".mobile-topbar .bars i").on("click", function () {
+  $(".mobile-topbar .bars").on("click", function () {
     $(".mobile-menu-overlay,.mobile-menu-main").addClass("active");
     return false;
   });

@@ -2,6 +2,71 @@
 @import "../mixin/font";
 @import "../mixin/line-limit";
 
+
+.categories_area_new {
+  margin-top: 40px;
+
+  .campaign {
+    text-align: center;
+
+    a {
+      background-color: #fcf4e9;
+      padding: 40px 30px;
+      text-shadow: 1px 1px #FFF !important;
+      color: #cc8119 !important;
+      @include font(32px, 700);
+      text-transform: uppercase;
+    }
+  }
+
+  .categories_item {
+    border-radius: 0 !important;
+    border: 0;
+    position: relative;
+    overflow: hidden;
+
+    .title {
+      @include font(11px, 400);
+      color: $black;
+      padding: 4px 10px;
+      background: $white;
+      border-radius: 0px 0px 10px 10px;
+      text-decoration: none;
+      box-shadow: 0 5px 15px 0 rgba(37, 44, 97, .15), 0 2px 4px 0 rgba(93, 100, 148, .2);
+      position: absolute;
+      top: -1px;
+      text-align: center;
+      max-width: 130px;
+      left: 50%;
+      transform: translateX(-50%);
+      line-height: 18px;
+    }
+  }
+}
+
+.offer_categories {
+  .categories_item{
+    overflow: visible !important;
+    box-shadow: 0 7px 15px 0 rgb(0 0 0 / 13%), 0 1px 4px 0 rgb(0 0 0 / 11%);
+  }
+  .title {
+    top: unset !important;
+    bottom: -7px;
+    border-radius: 5px !important;
+    padding: 0px 7px !important;
+    font-size: 12px;
+    font-weight: 500 !important;
+    max-width: unset !important;
+    white-space: nowrap;
+    box-shadow: none !important;
+
+    .cross {
+      color: #a9a9a9;
+      text-decoration: line-through;
+    }
+  }
+}
+
 .categories_area {
   margin-top: 40px;
 }
@@ -9,7 +74,6 @@
 .categories_item {
   position: relative;
   border: 1px solid $border;
-  border-radius: 8px;
   overflow: hidden;
 
   .text {
@@ -56,7 +120,7 @@
   margin-top: 24px;
 
   .categories_item {
-    margin: 0 12px;
+    margin: 0 8px;
   }
 
   .icon {
@@ -93,6 +157,7 @@
 
 .big_categories_area {
   margin-top: 60px;
+
   .b_title {
     @include font(22px, 600);
     color: $white;
@@ -110,14 +175,17 @@
 }
 
 .small_categories_area {
-  margin-top: 24px;
-  .text{
+  margin-top: 16px;
+
+  .text {
     padding: 12px;
-    .title{
+
+    .title {
       font-size: 13px !important;
       font-weight: 400 !important;
     }
-    .price{
+
+    .price {
       margin-top: 2px !important;
       font-size: 13px !important;
     }

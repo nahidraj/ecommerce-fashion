@@ -134,6 +134,12 @@
     opacity: 1;
     visibility: visible;
   }
+  .footer_area .footer_btm {
+    padding-bottom: 70px;
+  }
+  .scroll-to-top.show {
+    bottom: 65px;
+  }
 }
 @media (max-width: 767.98px) {
   .category_title .title {

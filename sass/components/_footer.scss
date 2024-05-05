@@ -41,6 +41,7 @@
     .right_info {
       max-width: 400px;
       width: 100%;
+
       .input_groups {
         label {
           @include font(14px, 500);
@@ -181,32 +182,99 @@
     .right {}
   }
 }
+
 /* back to top button start */
 .scroll-to-top {
-	display: inline-block;
-	background-color: $primary;
-	width: 40px;
-	height: 40px;
-	line-height: 40px;
-	text-align: center;
-	position: fixed;
-	bottom: 0px;
-	right: 30px;
-	transition: background-color .3s,
-		opacity .5s, visibility .5s;
-	opacity: 0;
-	visibility: hidden;
-	z-index: 1000;
-	border-radius: 5px;
-	font-size: 19px;
-	color: #ffffff;
-	cursor: pointer;
-	transition: all linear .3s;
-	border: 0;
+  display: inline-block;
+  background-color: $primary;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  position: fixed;
+  bottom: 0px;
+  right: 30px;
+  transition: background-color .3s,
+    opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+  border-radius: 5px;
+  font-size: 19px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: all linear .3s;
+  border: 0;
 }
 
 .scroll-to-top.show {
-	opacity: 1;
-	visibility: visible;
-	bottom: 30px;
+  opacity: 1;
+  visibility: visible;
+  bottom: 30px;
+}
+
+
+// footer menu area start
+
+.footer_menu_area {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  background-color: $white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+}
+
+.footer_menu_area ul {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.footer_menu_area ul li {
+  display: inline-block;
+}
+
+.footer_menu_area ul li a {
+  text-align: center;
+  color: #9F9D9C;
+  line-height: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 10px 0;
+}
+
+.footer_menu_area ul li a i {
+  font-size: 16px;
+}
+
+.footer_menu_area ul li span {
+  display: block;
+}
+
+.footer_menu_area ul li.active a {
+  color: $black;
+}
+
+.footer_menu_area ul li button {
+  text-align: center;
+  color: #9F9D9C;
+  line-height: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 10px 0;
+}
+
+.footer_menu_area ul li button i {
+  font-size: 16px;
+}
+
+.footer_menu_area ul li span {
+  display: block;
+}
+
+.footer_menu_area ul li.active button {
+  color: $black;
 }
